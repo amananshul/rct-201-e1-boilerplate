@@ -7,11 +7,11 @@ type List1Props = {
 };
 const List1 = (props: List1Props) => {
 const [value,setValue]=React.useState()
-  const [list,  { appendEnd,appendStart, popStart,popEnd, clear, reset, map }]: any = useNumberList(props.initialValues);
+  const [list,  { appendStart,popEnd, clear, reset  }]: any = useNumberList(props.initialValues);
 
   return (
     <div data-testid="list1">
-      <h3 data-testid="list1-label">{/* Label */}</h3>
+      <h3 data-testid="list1-label">List 1</h3>
       {/* Iterate List and wrap the element div below inside */}
       
       <div data-testid="list1-element">{list.map((l: any) => (

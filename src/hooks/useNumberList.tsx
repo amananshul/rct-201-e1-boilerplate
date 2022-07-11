@@ -25,7 +25,6 @@ const useNumberList = (initialArray: number[]) => {
     }
 
   }
-
   const popEnd = () => {
     let temp: number[] = [...list];
     temp.pop();
@@ -45,17 +44,7 @@ const useNumberList = (initialArray: number[]) => {
     setList(initialArray);
   };
 
-  const map = (el: any) => {
-    // console.log(el)
-    let temp: number[] = [...list];
-    let r: number[] = temp.map((el) => (el*2))
-    // console.log(r)
-    setList(r);
-  };
-
-
-
-  return [list, { appendEnd,appendStart, popStart,popEnd, clear, reset, map }];
+  return [list, { appendEnd,appendStart, popStart,popEnd, clear, reset }];
 };
 
 export default useNumberList;
